@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Student {
 
-    private int matrikelNummer;
+    private int id;
     private String name;
     private String fachbereich;
 
@@ -12,10 +12,15 @@ public class Student {
 
     }
 
-    public Student(String name, String fachbereich, int matrikelNummer) {
+    public Student(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public Student(String name, String fachbereich, int id) {
         this.name = name;
         this.fachbereich = fachbereich;
-        this.matrikelNummer = matrikelNummer;
+        this.id = id;
     }
 
     public Student(String name) {
@@ -23,12 +28,12 @@ public class Student {
     }
 
     public String toString() {
-        return "" + this.name + ", " + this.fachbereich + ", " + matrikelNummer;
+        return "" + this.name + ", " + this.fachbereich + ", " + id;
     }
 
 
-    public int getMatrikelNummer() {
-        return this.matrikelNummer;
+    public int getId() {
+        return this.id;
     }
 
     public String getName() {
@@ -40,8 +45,8 @@ public class Student {
 
     }
 
-    public void setMatrikelNummer(int matrikelNummer) {
-        this.matrikelNummer = matrikelNummer;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {
@@ -57,11 +62,11 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return matrikelNummer == student.matrikelNummer && name.equals(student.name) && fachbereich.equals(student.fachbereich);
+        return id == student.id && name.equals(student.name) && fachbereich.equals(student.fachbereich);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(matrikelNummer, name, fachbereich);
+        return Objects.hash(id, name, fachbereich);
     }
 }

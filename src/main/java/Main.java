@@ -24,10 +24,10 @@ public class Main {
 // Ab hier haben wir getter/setter Methoden erstellt
 
         guerbuezHasan.setName("Hasan Alperen Gürbüz");
-        guerbuezHasan.setMatrikelNummer(123456);
+        guerbuezHasan.setId(123456);
         guerbuezHasan.setFachbereich("Informatik");
         System.out.println(guerbuezHasan.getName());
-        System.out.println(guerbuezHasan.getMatrikelNummer());
+        System.out.println(guerbuezHasan.getId());
         System.out.println(guerbuezHasan.getFachbereich());
 
         Student liasGuerbuez = new Student("Lias Gürbüz", "Gurkenwissenschaften", 03032022);
