@@ -20,7 +20,7 @@ public class StudentDB {
     }
 public Student randomStudent(){
 
-        return this.studentArray[(int)Math.random() * studentArray.length];
+        return this.studentArray[ (int) (Math.random() * studentArray.length)];
 }
     @Override
     public String toString() {
