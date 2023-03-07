@@ -39,7 +39,7 @@ public class StudentDB {
         //  throw new Exception("Stundent not Found");
     }
 
-    public Student findByIdWithException(int id) {
+    public Student findByIdWithTryCatch(int id) {
         try {
             for (Student s : studentArray) {
                 if (s != null && s.getId()==id) {
