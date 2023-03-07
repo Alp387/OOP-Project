@@ -17,10 +17,11 @@ public class Main {
 
         StudentDB neueStudentDB = new StudentDB(studentenArray);
 
-        System.out.println(neueStudentDB.toString());
-        System.out.println(neueStudentDB.toString2());
-
-        System.out.println(neueStudentDB.randomStudent());
+//        System.out.println(neueStudentDB.toString());
+//        System.out.println(neueStudentDB.toString2());
+//
+//        System.out.println(neueStudentDB.randomStudent());
+        System.out.println(neueStudentDB.findById(1));
 
 //        Student guerbuezHasan = new Student();
 
