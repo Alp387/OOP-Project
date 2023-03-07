@@ -5,6 +5,10 @@
 import model.Student;
 import model.StudentDB;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -18,11 +22,28 @@ public class Main {
 
         StudentDB neueStudentDB = new StudentDB(studentenArray);
 
+        List<Student> studentList = new ArrayList<>();
+
+
+        studentList.add(0, new Student("Mario", "deb", 147));
+        studentList.add(1, new Student("Luigi", 148));
+        studentList.add(2, new Student("Wario", 149));
+
+        System.out.println(studentList.get(1));
+
+        for (Student student : studentList) {
+            System.out.println(student);
+        }
+
+
+
+
 //        System.out.println(neueStudentDB.toString());
 //        System.out.println(neueStudentDB.toString2());
 //
 //        System.out.println(neueStudentDB.randomStudent());
-        System.out.println(neueStudentDB.findById(13));
+        System.out.println("____Exceptions____");
+        //System.out.println(neueStudentDB.findById(123));
 
 //        Student guerbuezHasan = new Student();
 

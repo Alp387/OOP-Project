@@ -35,8 +35,6 @@ public class StudentDB {
             }
         }
         throw new Exception("Stundent not Found");
-
-        //  throw new Exception("Stundent not Found");
     }
 
     public Student findByIdWithTryCatch(int id) {
