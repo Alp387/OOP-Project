@@ -39,6 +39,20 @@ public class StudentDB {
         //  throw new Exception("Stundent not Found");
     }
 
+    public Student findByIdWithException(int id) {
+        try {
+            for (Student s : studentArray) {
+                if (s != null && s.getId()==id) {
+                    return s;
+                }
+            }
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("student is not found");
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return "StudentDB{" +
