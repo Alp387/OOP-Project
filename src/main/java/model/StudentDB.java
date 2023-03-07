@@ -24,17 +24,19 @@ public class StudentDB {
         return this.studentArray[(int) (Math.random() * studentArray.length)];
     }
 
-    public Student findById(int id) {
-        Student ausgabeStudent = null;
+
+    public Student findById(int id) throws Exception {
+        //Student ausgabeStudent = null;
+
 
         for (int i = 0; i < studentArray.length; i++) {
             if (studentArray[i].getId() == id) {
-                ausgabeStudent = studentArray[i];
+                return studentArray[i];
             }
-
-
         }
-        return ausgabeStudent;
+        throw new Exception("Stundent not Found");
+
+        //  throw new Exception("Stundent not Found");
     }
 
     @Override

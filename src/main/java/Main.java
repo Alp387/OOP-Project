@@ -7,13 +7,14 @@ import model.StudentDB;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 
-        Student[] studentenArray = new Student[3];
+        Student[] studentenArray = new Student[4];
         studentenArray[0] = new Student("Hasan", "Informatik", 123);
         studentenArray[1] = new Student("Lias", "Kindergardening", 555);
         studentenArray[2] = new Student("Batman", "Security", 777);
+        studentenArray[3] = new Student("Robin", "Security", 666);
 
         StudentDB neueStudentDB = new StudentDB(studentenArray);
 
@@ -21,7 +22,7 @@ public class Main {
 //        System.out.println(neueStudentDB.toString2());
 //
 //        System.out.println(neueStudentDB.randomStudent());
-        System.out.println(neueStudentDB.findById(1));
+        System.out.println(neueStudentDB.findById(13));
 
 //        Student guerbuezHasan = new Student();
 
